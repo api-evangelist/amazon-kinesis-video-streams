@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Video Streaming
+  - AWS
   - IoT
   - Machine Learning
   - Media
-  - AWS
+  - Video Streaming
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-kinesis-video-streams/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -28,9 +28,9 @@ apis:
     humanURL: https://aws.amazon.com/kinesis/video-streams/
     baseURL: https://kinesisvideo.amazonaws.com
     tags:
-      - Video Streaming
       - IoT
       - Media
+      - Video Streaming
     properties:
       - type: Documentation
         url: https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_Reference.html
