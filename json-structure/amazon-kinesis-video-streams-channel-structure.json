@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-kinesis-video-streams/refs/heads/main/json-structure/amazon-kinesis-video-streams-channel-structure.json",
+  "name": "Channel",
+  "description": "An Amazon Kinesis Video Streams signaling channel for WebRTC.",
+  "type": "object",
+  "properties": {
+    "ChannelName": {
+      "type": "string",
+      "description": "The name of the signaling channel.",
+      "example": "my-webrtc-channel"
+    },
+    "ChannelARN": {
+      "type": "string",
+      "description": "The ARN of the signaling channel."
+    },
+    "ChannelType": {
+      "type": "string",
+      "description": "The type of the signaling channel.",
+      "example": "SINGLE_MASTER",
+      "enum": [
+        "SINGLE_MASTER",
+        "FULL_MESH"
+      ]
+    },
+    "ChannelStatus": {
+      "type": "string",
+      "description": "The status of the signaling channel.",
+      "example": "ACTIVE",
+      "enum": [
+        "CREATING",
+        "ACTIVE",
+        "UPDATING",
+        "DELETING"
+      ]
+    },
+    "CreationTime": {
+      "type": "datetime",
+      "description": "When the channel was created."
+    }
+  }
+}

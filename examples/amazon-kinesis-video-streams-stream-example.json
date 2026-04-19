@@ -1,0 +1,7 @@
+{
+  "StreamName": "my-video-stream",
+  "StreamARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "Status": "ACTIVE",
+  "DataRetentionInHours": 24,
+  "CreationTime": "2025-03-15T14:30:00Z"
+}

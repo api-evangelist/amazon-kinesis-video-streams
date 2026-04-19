@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "kinesisvideostreams": "https://kinesisvideostreams.amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Stream": "kinesisvideostreams:Stream",
+    "Channel": "kinesisvideostreams:Channel",
+    "id": {
+      "@id": "schema:identifier",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "kinesisvideostreams:status",
+      "@type": "xsd:string"
+    },
+    "arn": {
+      "@id": "kinesisvideostreams:arn",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "updatedAt": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    }
+  }
+}

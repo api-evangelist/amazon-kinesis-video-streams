@@ -1,0 +1,90 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Kinesis Video Streams
+  description: Unified vocabulary for Amazon Kinesis Video Streams API operations and capability workflows.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - namespace: kinesis-video-streams
+    version: '2024-01-01'
+    status: active
+  resources:
+  - name: streams
+    api: kinesis-video-streams
+    actions:
+    - create stream
+    - list streams
+    - describe stream
+    - update stream
+    - delete stream
+  - name: channels
+    api: kinesis-video-streams
+    actions:
+    - create signaling channel
+    - list signaling channels
+    - describe signaling channel
+    - delete signaling channel
+  actions:
+  - name: create
+    http_method: POST
+    pattern: write
+  - name: list
+    http_method: GET
+    pattern: read
+  - name: describe
+    http_method: GET
+    pattern: read
+  - name: update
+    http_method: PUT
+    pattern: write
+  - name: delete
+    http_method: DELETE
+    pattern: destructive
+  authentication:
+    schemes:
+    - type: apikey
+      header: Authorization
+      description: AWS Signature Version 4
+capability:
+  workflows:
+  - name: Amazon Kinesis Video Streams Workflow
+    file: capabilities/amazon-kinesis-video-streams-workflow.yaml
+    description: Unified workflow for Amazon Kinesis Video Streams resource management
+    apis_combined:
+    - kinesis-video-streams
+    tool_count: 6
+    personas:
+    - Developer
+    - Administrator
+  personas:
+  - id: developer
+    name: Developer
+    description: Integrates API into applications
+  - id: administrator
+    name: Administrator
+    description: Manages resources and configurations
+crossReference:
+- resource: streams
+  operations:
+  - CreateStream
+  - ListStreams
+  - DescribeStream
+  - UpdateStream
+  - DeleteStream
+  workflows:
+  - Amazon Kinesis Video Streams Workflow
+  personas:
+  - Developer
+  - Administrator
+- resource: channels
+  operations:
+  - CreateSignalingChannel
+  - ListSignalingChannels
+  - DescribeSignalingChannel
+  - DeleteSignalingChannel
+  workflows:
+  - Amazon Kinesis Video Streams Workflow
+  personas:
+  - Developer
+  - Administrator

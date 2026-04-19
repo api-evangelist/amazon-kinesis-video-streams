@@ -1,58 +1,72 @@
 # Amazon Kinesis Video Streams (amazon-kinesis-video-streams)
-Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning, playback, and other processing. It automatically provisions and elastically scales all the infrastructure needed to ingest streaming video data from millions of devices.
+Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning, playback, and other processing.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-kinesis-video-streams/refs/heads/main/apis.yml)
+**URL:** [https://aws.amazon.com/kinesis/video-streams/](https://aws.amazon.com/kinesis/video-streams/)
 
-## Scope
-
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
 
 ## Tags:
 
- - Video Streaming, IoT, Machine Learning, Media, AWS
+ - AWS, Video, Streaming, Machine Learning, IoT
 
 ## Timestamps
 
-- **Created:** 2026-03-16 
-- **Modified:** 2026-03-16 
+- **Created:** 2024-01-15
+- **Modified:** 2026-04-19
 
 ## APIs
 
 ### Amazon Kinesis Video Streams API
-The Amazon Kinesis Video Streams API provides programmatic access to create and manage video streams, signaling channels, and WebRTC connections for streaming video from connected devices to AWS.
 
 **Human URL:** [https://aws.amazon.com/kinesis/video-streams/](https://aws.amazon.com/kinesis/video-streams/)
 
-
-#### Tags:
-
- - Video Streaming, IoT, Media
-
 #### Properties
 
-- [Documentation](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_Reference.html)
-- [OpenAPI](https://api.apis.guru/v2/specs/amazonaws.com/kinesisvideo/2017-09-30/openapi.yaml)
-- [Getting Started](https://aws.amazon.com/kinesis/video-streams/getting-started/)
-- [Pricing](https://aws.amazon.com/kinesis/video-streams/pricing/)
-- [FAQ](https://aws.amazon.com/kinesis/video-streams/faqs/)
+- [OpenAPI](openapi/amazon-kinesis-video-streams-openapi.yml)
+- [JSONSchema](json-schema/amazon-kinesis-video-streams-stream-schema.json)
+- [JSONSchema](json-schema/amazon-kinesis-video-streams-channel-schema.json)
+- [JSONLD](json-ld/amazon-kinesis-video-streams-context.jsonld)
 
-## Common Properties
+## Artifacts
 
-- [Portal](https://aws.amazon.com/kinesis/video-streams/)
-- [Website](https://aws.amazon.com/kinesis/video-streams/)
-- [Documentation](https://docs.aws.amazon.com/kinesisvideostreams/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
-- [Support](https://aws.amazon.com/premiumsupport/)
-- [Blog](https://aws.amazon.com/blogs/media/tag/amazon-kinesis-video-streams/)
-- [GitHub Organization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/kinesisvideo/)
-- [Sign Up](https://portal.aws.amazon.com/billing/signup)
-- [Login](https://signin.aws.amazon.com/)
-- [Status](https://health.aws.amazon.com/health/status)
-- [Contact](https://aws.amazon.com/contact-us/)
+### OpenAPI
+
+- [Amazon Kinesis Video Streams API](openapi/amazon-kinesis-video-streams-openapi.yml)
+
+### JSON Schema
+
+- [Stream](json-schema/amazon-kinesis-video-streams-stream-schema.json)
+- [Channel](json-schema/amazon-kinesis-video-streams-channel-schema.json)
+
+### JSON Structure
+
+- [Stream](json-structure/amazon-kinesis-video-streams-stream-structure.json)
+- [Channel](json-structure/amazon-kinesis-video-streams-channel-structure.json)
+
+### JSON-LD
+
+- [Amazon Kinesis Video Streams Context](json-ld/amazon-kinesis-video-streams-context.jsonld)
+
+### Examples
+
+- [Stream Example](examples/amazon-kinesis-video-streams-stream-example.json)
+- [Channel Example](examples/amazon-kinesis-video-streams-channel-example.json)
+
+## Capabilities
+
+### Workflow Capabilities
+
+| Workflow | APIs Combined | Tools | Persona |
+|----------|--------------|-------|---------|
+| [Amazon Kinesis Video Streams Workflow](capabilities/amazon-kinesis-video-streams-workflow.yaml) | Kinesis Video Streams | 6 | Developer, Administrator |
+
+## Vocabulary
+
+- [Amazon Kinesis Video Streams Vocabulary](vocabulary/amazon-kinesis-video-streams-vocabulary.yaml)
+
+## Rules
+
+- [Amazon Kinesis Video Streams Spectral Rules](rules/amazon-kinesis-video-streams-spectral-rules.yml)
 
 ## Maintainers
 

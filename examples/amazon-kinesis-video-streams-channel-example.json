@@ -1,0 +1,7 @@
+{
+  "ChannelName": "my-webrtc-channel",
+  "ChannelARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "ChannelType": "SINGLE_MASTER",
+  "ChannelStatus": "ACTIVE",
+  "CreationTime": "2025-03-15T14:30:00Z"
+}

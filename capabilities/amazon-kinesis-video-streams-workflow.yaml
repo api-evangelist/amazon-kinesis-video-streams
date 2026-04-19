@@ -1,0 +1,85 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Kinesis Video Streams Workflow
+  description: Unified workflow capability for Amazon Kinesis Video Streams combining resource management and operations.
+  tags:
+  - Amazon Kinesis Video Streams
+  - AWS
+  - Workflow
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+capability:
+  consumes:
+  - import: kinesis-video-streams
+    location: ./shared/kinesis-video-streams.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: kinesis-video-streams-api
+    description: REST API for Amazon Kinesis Video Streams workflow.
+    resources: []
+  - type: mcp
+    port: 9090
+    namespace: kinesis-video-streams-mcp
+    transport: http
+    description: MCP server for Amazon Kinesis Video Streams.
+    tools:
+    - name: streams-create-stream
+      description: Creates a new Kinesis video stream.
+      hints:
+        readOnly: false
+        idempotent: false
+      call: kinesis-video-streams.createstream
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: streams-list-streams
+      description: Returns an array of StreamInfo objects.
+      hints:
+        readOnly: true
+        idempotent: true
+      call: kinesis-video-streams.liststreams
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: streams-describe-stream
+      description: Returns the most current information about the specified stream.
+      hints:
+        readOnly: true
+        idempotent: true
+      call: kinesis-video-streams.describestream
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: channels-create-signaling-channel
+      description: Creates a signaling channel.
+      hints:
+        readOnly: false
+        idempotent: false
+      call: kinesis-video-streams.createsignalingchannel
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: channels-list-signaling-channels
+      description: Returns an array of ChannelInfo objects.
+      hints:
+        readOnly: true
+        idempotent: true
+      call: kinesis-video-streams.listsignalingchannels
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: channels-describe-signaling-channel
+      description: Returns the most current information about the signaling channel.
+      hints:
+        readOnly: true
+        idempotent: true
+      call: kinesis-video-streams.describesignalingchannel
+      outputParameters:
+      - type: object
+        mapping: $.

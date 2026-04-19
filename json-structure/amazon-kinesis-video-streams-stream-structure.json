@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-kinesis-video-streams/refs/heads/main/json-structure/amazon-kinesis-video-streams-stream-structure.json",
+  "name": "Stream",
+  "description": "An Amazon Kinesis Video Stream.",
+  "type": "object",
+  "properties": {
+    "StreamName": {
+      "type": "string",
+      "description": "The name of the stream.",
+      "example": "my-video-stream"
+    },
+    "StreamARN": {
+      "type": "string",
+      "description": "The Amazon Resource Name (ARN) of the stream."
+    },
+    "Status": {
+      "type": "string",
+      "description": "The status of the stream.",
+      "example": "ACTIVE",
+      "enum": [
+        "CREATING",
+        "ACTIVE",
+        "UPDATING",
+        "DELETING"
+      ]
+    },
+    "DataRetentionInHours": {
+      "type": "int32",
+      "description": "How long the channel retains data (in hours).",
+      "example": 24
+    },
+    "CreationTime": {
+      "type": "datetime",
+      "description": "When the stream was created."
+    }
+  }
+}
