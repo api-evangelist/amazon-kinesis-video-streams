@@ -1,4 +1,4 @@
-naftiko: 1.0.0-alpha1
+naftiko: 1.0.0-alpha2
 info:
   label: Amazon Kinesis Video Streams Workflow
   description: Unified workflow capability for Amazon Kinesis Video Streams combining resource management and operations.
@@ -7,7 +7,7 @@ info:
   - AWS
   - Workflow
   created: '2026-04-19'
-  modified: '2026-04-19'
+  modified: '2026-05-06'
 binds:
 - namespace: env
   keys:
@@ -15,8 +15,72 @@ binds:
     AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
 capability:
   consumes:
-  - import: kinesis-video-streams
-    location: ./shared/kinesis-video-streams.yaml
+  - type: http
+    namespace: kinesis-video-streams
+    baseUri: https://kinesisvideo.us-east-1.amazonaws.com
+    description: Amazon Kinesis Video Streams service.
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_ACCESS_KEY_ID}}'
+      placement: header
+    resources:
+    - name: streams
+      path: /streams
+      description: Video stream management
+      operations:
+      - name: createstream
+        method: POST
+        description: Creates a new Kinesis video stream.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: liststreams
+        method: GET
+        description: Returns an array of StreamInfo objects.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describestream
+        method: GET
+        description: Returns the most current information about the specified stream.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: channels
+      path: /channels
+      description: WebRTC signaling channel management
+      operations:
+      - name: createsignalingchannel
+        method: POST
+        description: Creates a signaling channel.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listsignalingchannels
+        method: GET
+        description: Returns an array of ChannelInfo objects.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describesignalingchannel
+        method: GET
+        description: Returns the most current information about the signaling channel.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
   exposes:
   - type: rest
     port: 8080
