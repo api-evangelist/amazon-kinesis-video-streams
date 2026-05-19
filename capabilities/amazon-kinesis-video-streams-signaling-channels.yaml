@@ -1,0 +1,175 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Kinesis Video Streams API — Signaling Channels
+  description: 'Amazon Kinesis Video Streams API — Signaling Channels. 4 operations. Lead operation: Amazon Kinesis Video
+    Streams Create Signaling Channel. Self-contained Naftiko capability covering one Amazon Kinesis Video Streams business
+    surface.'
+  tags:
+  - Amazon Kinesis Video Streams
+  - Signaling Channels
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_KINESIS_VIDEO_STREAMS_API_KEY: AMAZON_KINESIS_VIDEO_STREAMS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-kinesis-video-streams-signaling-channels
+    baseUri: https://kinesisvideo.us-east-1.amazonaws.com
+    description: Amazon Kinesis Video Streams API — Signaling Channels business capability. Self-contained, no shared references.
+    resources:
+    - name: channels
+      path: /channels
+      operations:
+      - name: createsignalingchannel
+        method: POST
+        description: Amazon Kinesis Video Streams Create Signaling Channel
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listsignalingchannels
+        method: GET
+        description: Amazon Kinesis Video Streams List Signaling Channels
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: channels-ChannelName
+      path: /channels/{ChannelName}
+      operations:
+      - name: describesignalingchannel
+        method: GET
+        description: Amazon Kinesis Video Streams Describe Signaling Channel
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: ChannelName
+          in: path
+          type: string
+          description: The name of the channel.
+          required: true
+      - name: deletesignalingchannel
+        method: DELETE
+        description: Amazon Kinesis Video Streams Delete Signaling Channel
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: ChannelName
+          in: path
+          type: string
+          description: The name of the channel.
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_KINESIS_VIDEO_STREAMS_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-kinesis-video-streams-signaling-channels-rest
+    port: 8080
+    description: REST adapter for Amazon Kinesis Video Streams API — Signaling Channels. One Spectral-compliant resource per
+      consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/channels
+      name: channels
+      description: REST surface for channels.
+      operations:
+      - method: POST
+        name: createsignalingchannel
+        description: Amazon Kinesis Video Streams Create Signaling Channel
+        call: amazon-kinesis-video-streams-signaling-channels.createsignalingchannel
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listsignalingchannels
+        description: Amazon Kinesis Video Streams List Signaling Channels
+        call: amazon-kinesis-video-streams-signaling-channels.listsignalingchannels
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/channels/{channelname}
+      name: channels-channelname
+      description: REST surface for channels-ChannelName.
+      operations:
+      - method: GET
+        name: describesignalingchannel
+        description: Amazon Kinesis Video Streams Describe Signaling Channel
+        call: amazon-kinesis-video-streams-signaling-channels.describesignalingchannel
+        with:
+          ChannelName: rest.ChannelName
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletesignalingchannel
+        description: Amazon Kinesis Video Streams Delete Signaling Channel
+        call: amazon-kinesis-video-streams-signaling-channels.deletesignalingchannel
+        with:
+          ChannelName: rest.ChannelName
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-kinesis-video-streams-signaling-channels-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Kinesis Video Streams API — Signaling Channels. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: amazon-kinesis-video-streams-create
+      description: Amazon Kinesis Video Streams Create Signaling Channel
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-kinesis-video-streams-signaling-channels.createsignalingchannel
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-kinesis-video-streams-list
+      description: Amazon Kinesis Video Streams List Signaling Channels
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-kinesis-video-streams-signaling-channels.listsignalingchannels
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-kinesis-video-streams-describe
+      description: Amazon Kinesis Video Streams Describe Signaling Channel
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-kinesis-video-streams-signaling-channels.describesignalingchannel
+      with:
+        ChannelName: tools.ChannelName
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-kinesis-video-streams-delete
+      description: Amazon Kinesis Video Streams Delete Signaling Channel
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-kinesis-video-streams-signaling-channels.deletesignalingchannel
+      with:
+        ChannelName: tools.ChannelName
+      outputParameters:
+      - type: object
+        mapping: $.

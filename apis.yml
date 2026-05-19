@@ -1,10 +1,8 @@
 aid: amazon-kinesis-video-streams
 name: Amazon Kinesis Video Streams
-description: >-
-  Amazon Kinesis Video Streams makes it easy to securely stream video from
-  connected devices to AWS for analytics, machine learning, playback, and other
-  processing. It automatically provisions and elastically scales all the
-  infrastructure needed to ingest streaming video data from millions of devices.
+description: Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics,
+  machine learning, playback, and other processing. It automatically provisions and elastically scales all the infrastructure
+  needed to ingest streaming video data from millions of devices.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -13,18 +11,15 @@ tags:
 - Machine Learning
 - Media
 - Video Streaming
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/amazon-kinesis-video-streams/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/amazon-kinesis-video-streams/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
 - aid: amazon-kinesis-video-streams:amazon-kinesis-video-streams-api
   name: Amazon Kinesis Video Streams API
-  description: >-
-    The Amazon Kinesis Video Streams API provides programmatic access to
-    create and manage video streams, signaling channels, and WebRTC
-    connections for streaming video from connected devices to AWS.
+  description: The Amazon Kinesis Video Streams API provides programmatic access to create and manage video streams, signaling
+    channels, and WebRTC connections for streaming video from connected devices to AWS.
   humanURL: https://aws.amazon.com/kinesis/video-streams/
   baseURL: https://kinesisvideo.amazonaws.com
   tags:
@@ -48,6 +43,10 @@ apis:
     url: json-schema/amazon-kinesis-video-streams-channel-schema.json
   - type: JSONLD
     url: json-ld/amazon-kinesis-video-streams-context.jsonld
+  - type: NaftikoCapability
+    url: capabilities/amazon-kinesis-video-streams-signaling-channels.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-kinesis-video-streams-streams.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/kinesis/video-streams/
@@ -107,8 +106,6 @@ common:
     description: Use video data for machine learning model training and inference.
 - type: SpectralRules
   url: rules/amazon-kinesis-video-streams-spectral-rules.yml
-- type: NaftikoCapability
-  url: capabilities/amazon-kinesis-video-streams-workflow.yaml
 - type: Vocabulary
   url: vocabulary/amazon-kinesis-video-streams-vocabulary.yaml
 maintainers:

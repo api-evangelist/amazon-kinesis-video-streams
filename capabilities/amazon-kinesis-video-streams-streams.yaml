@@ -1,0 +1,209 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Kinesis Video Streams API — Streams
+  description: 'Amazon Kinesis Video Streams API — Streams. 5 operations. Lead operation: Amazon Kinesis Video Streams Create
+    Stream. Self-contained Naftiko capability covering one Amazon Kinesis Video Streams business surface.'
+  tags:
+  - Amazon Kinesis Video Streams
+  - Streams
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_KINESIS_VIDEO_STREAMS_API_KEY: AMAZON_KINESIS_VIDEO_STREAMS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-kinesis-video-streams-streams
+    baseUri: https://kinesisvideo.us-east-1.amazonaws.com
+    description: Amazon Kinesis Video Streams API — Streams business capability. Self-contained, no shared references.
+    resources:
+    - name: streams
+      path: /streams
+      operations:
+      - name: createstream
+        method: POST
+        description: Amazon Kinesis Video Streams Create Stream
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: liststreams
+        method: GET
+        description: Amazon Kinesis Video Streams List Streams
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: streams-StreamName
+      path: /streams/{StreamName}
+      operations:
+      - name: describestream
+        method: GET
+        description: Amazon Kinesis Video Streams Describe Stream
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: StreamName
+          in: path
+          type: string
+          description: The name of the stream.
+          required: true
+      - name: updatestream
+        method: PUT
+        description: Amazon Kinesis Video Streams Update Stream
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: StreamName
+          in: path
+          type: string
+          description: The name of the stream.
+          required: true
+      - name: deletestream
+        method: DELETE
+        description: Amazon Kinesis Video Streams Delete Stream
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: StreamName
+          in: path
+          type: string
+          description: The name of the stream.
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_KINESIS_VIDEO_STREAMS_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-kinesis-video-streams-streams-rest
+    port: 8080
+    description: REST adapter for Amazon Kinesis Video Streams API — Streams. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/streams
+      name: streams
+      description: REST surface for streams.
+      operations:
+      - method: POST
+        name: createstream
+        description: Amazon Kinesis Video Streams Create Stream
+        call: amazon-kinesis-video-streams-streams.createstream
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: liststreams
+        description: Amazon Kinesis Video Streams List Streams
+        call: amazon-kinesis-video-streams-streams.liststreams
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/streams/{streamname}
+      name: streams-streamname
+      description: REST surface for streams-StreamName.
+      operations:
+      - method: GET
+        name: describestream
+        description: Amazon Kinesis Video Streams Describe Stream
+        call: amazon-kinesis-video-streams-streams.describestream
+        with:
+          StreamName: rest.StreamName
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: updatestream
+        description: Amazon Kinesis Video Streams Update Stream
+        call: amazon-kinesis-video-streams-streams.updatestream
+        with:
+          StreamName: rest.StreamName
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletestream
+        description: Amazon Kinesis Video Streams Delete Stream
+        call: amazon-kinesis-video-streams-streams.deletestream
+        with:
+          StreamName: rest.StreamName
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-kinesis-video-streams-streams-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Kinesis Video Streams API — Streams. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: amazon-kinesis-video-streams-create
+      description: Amazon Kinesis Video Streams Create Stream
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-kinesis-video-streams-streams.createstream
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-kinesis-video-streams-list
+      description: Amazon Kinesis Video Streams List Streams
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-kinesis-video-streams-streams.liststreams
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-kinesis-video-streams-describe
+      description: Amazon Kinesis Video Streams Describe Stream
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-kinesis-video-streams-streams.describestream
+      with:
+        StreamName: tools.StreamName
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-kinesis-video-streams-update
+      description: Amazon Kinesis Video Streams Update Stream
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-kinesis-video-streams-streams.updatestream
+      with:
+        StreamName: tools.StreamName
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-kinesis-video-streams-delete
+      description: Amazon Kinesis Video Streams Delete Stream
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-kinesis-video-streams-streams.deletestream
+      with:
+        StreamName: tools.StreamName
+      outputParameters:
+      - type: object
+        mapping: $.
