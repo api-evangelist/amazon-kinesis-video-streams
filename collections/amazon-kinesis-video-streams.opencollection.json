@@ -1,0 +1,173 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Kinesis Video Streams API",
+    "version": "2024-01-01"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Streams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Kinesis Video Streams List Streams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kinesisvideo.us-east-1.amazonaws.com/streams"
+          },
+          "docs": "Returns an array of StreamInfo objects."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Video Streams Create Stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://kinesisvideo.us-east-1.amazonaws.com/streams"
+          },
+          "docs": "Creates a new Kinesis video stream."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Video Streams Describe Stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kinesisvideo.us-east-1.amazonaws.com/streams/:StreamName",
+            "params": [
+              {
+                "name": "StreamName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the stream."
+              }
+            ]
+          },
+          "docs": "Returns the most current information about the specified stream."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Video Streams Update Stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://kinesisvideo.us-east-1.amazonaws.com/streams/:StreamName",
+            "params": [
+              {
+                "name": "StreamName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the stream."
+              }
+            ]
+          },
+          "docs": "Updates stream metadata, such as the device name and media type."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Video Streams Delete Stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://kinesisvideo.us-east-1.amazonaws.com/streams/:StreamName",
+            "params": [
+              {
+                "name": "StreamName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the stream."
+              }
+            ]
+          },
+          "docs": "Deletes a Kinesis video stream and the data contained in the stream."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Signaling Channels",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Kinesis Video Streams List Signaling Channels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kinesisvideo.us-east-1.amazonaws.com/channels"
+          },
+          "docs": "Returns an array of ChannelInfo objects."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Video Streams Create Signaling Channel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://kinesisvideo.us-east-1.amazonaws.com/channels"
+          },
+          "docs": "Creates a signaling channel."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Video Streams Describe Signaling Channel",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kinesisvideo.us-east-1.amazonaws.com/channels/:ChannelName",
+            "params": [
+              {
+                "name": "ChannelName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the channel."
+              }
+            ]
+          },
+          "docs": "Returns the most current information about the signaling channel."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Video Streams Delete Signaling Channel",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://kinesisvideo.us-east-1.amazonaws.com/channels/:ChannelName",
+            "params": [
+              {
+                "name": "ChannelName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the channel."
+              }
+            ]
+          },
+          "docs": "Deletes a specified signaling channel."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
