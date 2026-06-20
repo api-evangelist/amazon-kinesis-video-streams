@@ -5,7 +5,7 @@ description: >-
   machine learning, playback, and other processing. It automatically provisions and elastically scales all the
   infrastructure needed to ingest streaming video data from millions of devices.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AWS
   - IoT
