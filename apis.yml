@@ -46,6 +46,14 @@ apis:
       - type: JSONLD
         url: json-ld/amazon-kinesis-video-streams-context.jsonld
 common:
+  - type: TrustCenter
+    url: security/amazon-kinesis-video-streams-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-kinesis-video-streams-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-kinesis-video-streams-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-kinesis-video-streams-authentication.yml
   - type: Portal
     url: https://aws.amazon.com/kinesis/video-streams/
   - type: Portal
