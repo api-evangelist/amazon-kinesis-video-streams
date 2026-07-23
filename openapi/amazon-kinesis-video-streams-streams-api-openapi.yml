@@ -1,0 +1,142 @@
+openapi: 3.1.0
+info:
+  title: Amazon Kinesis Video Signaling Channels Streams API
+  description: The Amazon Kinesis Video Streams API provides programmatic access to manage Kinesis Video Streams resources.
+  version: '2024-01-01'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://kinesisvideo.us-east-1.amazonaws.com
+  description: Amazon Kinesis Video Streams endpoint
+security:
+- sigv4: []
+tags:
+- name: Streams
+  description: Video stream management
+paths:
+  /streams:
+    post:
+      operationId: CreateStream
+      summary: Amazon Kinesis Video Streams Create Stream
+      description: Creates a new Kinesis video stream.
+      tags:
+      - Streams
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+    get:
+      operationId: ListStreams
+      summary: Amazon Kinesis Video Streams List Streams
+      description: Returns an array of StreamInfo objects.
+      tags:
+      - Streams
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+  /streams/{StreamName}:
+    get:
+      operationId: DescribeStream
+      summary: Amazon Kinesis Video Streams Describe Stream
+      description: Returns the most current information about the specified stream.
+      tags:
+      - Streams
+      parameters:
+      - name: StreamName
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The name of the stream.
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+    put:
+      operationId: UpdateStream
+      summary: Amazon Kinesis Video Streams Update Stream
+      description: Updates stream metadata, such as the device name and media type.
+      tags:
+      - Streams
+      parameters:
+      - name: StreamName
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The name of the stream.
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+    delete:
+      operationId: DeleteStream
+      summary: Amazon Kinesis Video Streams Delete Stream
+      description: Deletes a Kinesis video stream and the data contained in the stream.
+      tags:
+      - Streams
+      parameters:
+      - name: StreamName
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The name of the stream.
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4 authentication
