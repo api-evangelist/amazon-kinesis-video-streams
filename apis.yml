@@ -5,7 +5,20 @@ description: >-
   machine learning, playback, and other processing. It automatically provisions and elastically scales all the
   infrastructure needed to ingest streaming video data from millions of devices.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-kinesis-video-streams.png
 tags:
   - AWS
   - IoT
@@ -17,35 +30,57 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: amazon-kinesis-video-streams:amazon-kinesis-video-streams-api
-    name: Amazon Kinesis Video Streams API
-    description: >-
-      The Amazon Kinesis Video Streams API provides programmatic access to create and manage video streams, signaling
-      channels, and WebRTC connections for streaming video from connected devices to AWS.
-    humanURL: https://aws.amazon.com/kinesis/video-streams/
-    baseURL: https://kinesisvideo.amazonaws.com
-    tags:
-      - IoT
-      - Media
-      - Video Streaming
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_Reference.html
-      - type: OpenAPI
-        url: https://api.apis.guru/v2/specs/amazonaws.com/kinesisvideo/2017-09-30/openapi.yaml
-      - type: GettingStarted
-        url: https://aws.amazon.com/kinesis/video-streams/getting-started/
-      - type: Pricing
-        url: https://aws.amazon.com/kinesis/video-streams/pricing/
-      - type: FAQ
-        url: https://aws.amazon.com/kinesis/video-streams/faqs/
-      - type: JSONSchema
-        url: json-schema/amazon-kinesis-video-streams-stream-schema.json
-      - type: JSONSchema
-        url: json-schema/amazon-kinesis-video-streams-channel-schema.json
-      - type: JSONLD
-        url: json-ld/amazon-kinesis-video-streams-context.jsonld
+- aid: amazon-kinesis-video-streams:amazon-kinesis-video-streams-signaling-channels-api
+  name: Amazon Kinesis Video Streams Signaling Channels API
+  description: WebRTC signaling channel management
+  humanURL: https://aws.amazon.com/kinesis/video-streams/
+  baseURL: https://kinesisvideo.amazonaws.com
+  tags:
+  - Signaling Channels
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-kinesis-video-streams-signaling-channels-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_Reference.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/kinesis/video-streams/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/kinesis/video-streams/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/kinesis/video-streams/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-kinesis-video-streams-stream-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-kinesis-video-streams-channel-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-kinesis-video-streams-context.jsonld
+- aid: amazon-kinesis-video-streams:amazon-kinesis-video-streams-streams-api
+  name: Amazon Kinesis Video Streams Streams API
+  description: Video stream management
+  humanURL: https://aws.amazon.com/kinesis/video-streams/
+  baseURL: https://kinesisvideo.amazonaws.com
+  tags:
+  - Streams
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-kinesis-video-streams-streams-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_Reference.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/kinesis/video-streams/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/kinesis/video-streams/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/kinesis/video-streams/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-kinesis-video-streams-stream-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-kinesis-video-streams-channel-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-kinesis-video-streams-context.jsonld
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-kinesis-video-streams/overview
   - type: AgenticAccess
     url: agentic-access/amazon-kinesis-video-streams-agentic-access.yml
   - type: TrustCenter
