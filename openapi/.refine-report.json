@@ -1,0 +1,16 @@
+{
+  "provider": "amazon-kinesis-video-streams",
+  "sources": [
+    "amazon-kinesis-video-streams-signaling-channels-api-openapi.yml",
+    "amazon-kinesis-video-streams-streams-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-kinesis-video-streams-signaling-channels-api-openapi.yml",
+    "amazon-kinesis-video-streams-streams-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

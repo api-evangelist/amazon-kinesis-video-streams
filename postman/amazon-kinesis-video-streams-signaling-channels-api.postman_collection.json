@@ -1,0 +1,756 @@
+{
+  "info": {
+    "_postman_id": "de3ba78b-3f47-4b24-97be-2d33b3f3672a",
+    "name": "Amazon Kinesis Video Streams Signaling Channels API",
+    "description": "The Amazon Kinesis Video Streams API provides programmatic access to manage Kinesis Video Streams resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:47:31.000Z",
+    "updatedAt": "2026-07-28T00:47:31.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-de3ba78b-3f47-4b24-97be-2d33b3f3672a"
+  },
+  "item": [
+    {
+      "name": "channels",
+      "item": [
+        {
+          "name": "{ChannelName}",
+          "item": [
+            {
+              "name": "Amazon Kinesis Video Streams Describe Signaling Channel",
+              "id": "3738f79a-674f-42fd-9199-c9a3b25f8562",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/channels/:ChannelName",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels",
+                    ":ChannelName"
+                  ],
+                  "variable": [
+                    {
+                      "id": "b36d1ded-c51e-43cd-8aed-5bdf7e92d340",
+                      "key": "ChannelName",
+                      "value": "<string>",
+                      "description": "(Required) The name of the channel."
+                    }
+                  ]
+                },
+                "description": "Returns the most current information about the signaling channel."
+              },
+              "response": [
+                {
+                  "id": "a66d5bde-ecd3-4a93-b67a-36057003e3b1",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/channels/:ChannelName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "channels",
+                        ":ChannelName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "ChannelName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:31.000Z",
+                  "updatedAt": "2026-07-28T00:47:31.000Z",
+                  "uid": "35240-a66d5bde-ecd3-4a93-b67a-36057003e3b1"
+                },
+                {
+                  "id": "7ea33e80-5f29-4a9a-85cd-f87b21fe5a95",
+                  "name": "Bad request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/channels/:ChannelName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "channels",
+                        ":ChannelName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "ChannelName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:31.000Z",
+                  "updatedAt": "2026-07-28T00:47:31.000Z",
+                  "uid": "35240-7ea33e80-5f29-4a9a-85cd-f87b21fe5a95"
+                },
+                {
+                  "id": "4b57bede-2f67-4d39-b8f0-30804caec3b9",
+                  "name": "Access denied",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/channels/:ChannelName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "channels",
+                        ":ChannelName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "ChannelName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:31.000Z",
+                  "updatedAt": "2026-07-28T00:47:31.000Z",
+                  "uid": "35240-4b57bede-2f67-4d39-b8f0-30804caec3b9"
+                },
+                {
+                  "id": "3065fc43-6939-443e-baef-17276565f048",
+                  "name": "Internal server error",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/channels/:ChannelName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "channels",
+                        ":ChannelName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "ChannelName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:31.000Z",
+                  "updatedAt": "2026-07-28T00:47:31.000Z",
+                  "uid": "35240-3065fc43-6939-443e-baef-17276565f048"
+                }
+              ],
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-3738f79a-674f-42fd-9199-c9a3b25f8562"
+            },
+            {
+              "name": "Amazon Kinesis Video Streams Delete Signaling Channel",
+              "id": "015ed3d9-a1f0-42b7-82b2-1f14da3444b4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/channels/:ChannelName",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels",
+                    ":ChannelName"
+                  ],
+                  "variable": [
+                    {
+                      "id": "bea42c1f-cb57-4d1d-9db1-6bd986fbcd11",
+                      "key": "ChannelName",
+                      "value": "<string>",
+                      "description": "(Required) The name of the channel."
+                    }
+                  ]
+                },
+                "description": "Deletes a specified signaling channel."
+              },
+              "response": [
+                {
+                  "id": "255c5140-c464-4d7e-b179-e8ccd40ee0bb",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/channels/:ChannelName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "channels",
+                        ":ChannelName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "ChannelName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:31.000Z",
+                  "updatedAt": "2026-07-28T00:47:31.000Z",
+                  "uid": "35240-255c5140-c464-4d7e-b179-e8ccd40ee0bb"
+                },
+                {
+                  "id": "2d4f4a58-20b9-4093-bd22-43147f353537",
+                  "name": "Bad request",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/channels/:ChannelName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "channels",
+                        ":ChannelName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "ChannelName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:31.000Z",
+                  "updatedAt": "2026-07-28T00:47:31.000Z",
+                  "uid": "35240-2d4f4a58-20b9-4093-bd22-43147f353537"
+                },
+                {
+                  "id": "7eb68d01-d21f-4c5d-a480-e579340ffbc2",
+                  "name": "Access denied",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/channels/:ChannelName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "channels",
+                        ":ChannelName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "ChannelName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:31.000Z",
+                  "updatedAt": "2026-07-28T00:47:31.000Z",
+                  "uid": "35240-7eb68d01-d21f-4c5d-a480-e579340ffbc2"
+                },
+                {
+                  "id": "182c08d8-2761-481a-9f15-daa3baccdb05",
+                  "name": "Internal server error",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/channels/:ChannelName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "channels",
+                        ":ChannelName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "ChannelName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:31.000Z",
+                  "updatedAt": "2026-07-28T00:47:31.000Z",
+                  "uid": "35240-182c08d8-2761-481a-9f15-daa3baccdb05"
+                }
+              ],
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-015ed3d9-a1f0-42b7-82b2-1f14da3444b4"
+            }
+          ],
+          "id": "a79dcbfb-45eb-497c-92d2-50c75bc0de24",
+          "createdAt": "2026-07-28T00:47:31.000Z",
+          "updatedAt": "2026-07-28T00:47:31.000Z",
+          "uid": "35240-a79dcbfb-45eb-497c-92d2-50c75bc0de24"
+        },
+        {
+          "name": "Amazon Kinesis Video Streams Create Signaling Channel",
+          "id": "2b5edffc-5da9-4749-af05-436588275216",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/channels",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "channels"
+              ]
+            },
+            "description": "Creates a signaling channel."
+          },
+          "response": [
+            {
+              "id": "4666e9a0-7056-4e8f-9a9e-30d3a8ed3440",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/channels",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-4666e9a0-7056-4e8f-9a9e-30d3a8ed3440"
+            },
+            {
+              "id": "b4d38b73-1b67-481a-9a2f-4b5e25ccc202",
+              "name": "Bad request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/channels",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-b4d38b73-1b67-481a-9a2f-4b5e25ccc202"
+            },
+            {
+              "id": "eebbacb0-eb1a-4c14-aab6-0e3a8ca88cef",
+              "name": "Access denied",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/channels",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-eebbacb0-eb1a-4c14-aab6-0e3a8ca88cef"
+            },
+            {
+              "id": "a9d9e879-39b4-47cb-ad60-676ce9e7c53a",
+              "name": "Internal server error",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/channels",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-a9d9e879-39b4-47cb-ad60-676ce9e7c53a"
+            }
+          ],
+          "createdAt": "2026-07-28T00:47:31.000Z",
+          "updatedAt": "2026-07-28T00:47:31.000Z",
+          "uid": "35240-2b5edffc-5da9-4749-af05-436588275216"
+        },
+        {
+          "name": "Amazon Kinesis Video Streams List Signaling Channels",
+          "id": "504666c3-5074-497e-9c71-78d3aa4eaad6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/channels",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "channels"
+              ]
+            },
+            "description": "Returns an array of ChannelInfo objects."
+          },
+          "response": [
+            {
+              "id": "11d53dee-8c17-43ca-bd2e-d27ae92b0c7a",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/channels",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-11d53dee-8c17-43ca-bd2e-d27ae92b0c7a"
+            },
+            {
+              "id": "ac0bd1ef-3f8d-4e68-992c-72e6083cf251",
+              "name": "Bad request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/channels",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-ac0bd1ef-3f8d-4e68-992c-72e6083cf251"
+            },
+            {
+              "id": "5eecac08-3b8a-47fd-b478-2637a991729a",
+              "name": "Access denied",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/channels",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-5eecac08-3b8a-47fd-b478-2637a991729a"
+            },
+            {
+              "id": "123ab059-1f08-49c0-b9bb-185e32a97a06",
+              "name": "Internal server error",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/channels",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "channels"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:31.000Z",
+              "updatedAt": "2026-07-28T00:47:31.000Z",
+              "uid": "35240-123ab059-1f08-49c0-b9bb-185e32a97a06"
+            }
+          ],
+          "createdAt": "2026-07-28T00:47:31.000Z",
+          "updatedAt": "2026-07-28T00:47:31.000Z",
+          "uid": "35240-504666c3-5074-497e-9c71-78d3aa4eaad6"
+        }
+      ],
+      "id": "d800ab8b-4144-4ac9-bf14-3cfea83e8d5d",
+      "createdAt": "2026-07-28T00:47:31.000Z",
+      "updatedAt": "2026-07-28T00:47:31.000Z",
+      "uid": "35240-d800ab8b-4144-4ac9-bf14-3cfea83e8d5d"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://kinesisvideo.us-east-1.amazonaws.com"
+    }
+  ]
+}

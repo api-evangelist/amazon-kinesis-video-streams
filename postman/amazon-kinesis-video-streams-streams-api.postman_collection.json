@@ -1,0 +1,947 @@
+{
+  "info": {
+    "_postman_id": "53537d2a-56e2-407e-bd95-6096a8b2d194",
+    "name": "Amazon Kinesis Video Signaling Channels Streams API",
+    "description": "The Amazon Kinesis Video Streams API provides programmatic access to manage Kinesis Video Streams resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:47:32.000Z",
+    "updatedAt": "2026-07-28T00:47:32.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-53537d2a-56e2-407e-bd95-6096a8b2d194"
+  },
+  "item": [
+    {
+      "name": "streams",
+      "item": [
+        {
+          "name": "{StreamName}",
+          "item": [
+            {
+              "name": "Amazon Kinesis Video Streams Describe Stream",
+              "id": "bd570184-ff7c-4e40-8d1a-123ba7366ba6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/streams/:StreamName",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams",
+                    ":StreamName"
+                  ],
+                  "variable": [
+                    {
+                      "id": "5af51a00-0881-4ac9-bccb-da6a2b45a02f",
+                      "key": "StreamName",
+                      "value": "<string>",
+                      "description": "(Required) The name of the stream."
+                    }
+                  ]
+                },
+                "description": "Returns the most current information about the specified stream."
+              },
+              "response": [
+                {
+                  "id": "b5a4e002-5b9a-4c0e-b3d6-41157348fe11",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-b5a4e002-5b9a-4c0e-b3d6-41157348fe11"
+                },
+                {
+                  "id": "f03f063e-280c-4064-8ba4-fc30ecaf883c",
+                  "name": "Bad request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-f03f063e-280c-4064-8ba4-fc30ecaf883c"
+                },
+                {
+                  "id": "77a77128-c4ea-4f22-8d4b-1e9c20bf0300",
+                  "name": "Access denied",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-77a77128-c4ea-4f22-8d4b-1e9c20bf0300"
+                },
+                {
+                  "id": "080e915c-904f-4c9d-8c11-18143e98ef85",
+                  "name": "Internal server error",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-080e915c-904f-4c9d-8c11-18143e98ef85"
+                }
+              ],
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-bd570184-ff7c-4e40-8d1a-123ba7366ba6"
+            },
+            {
+              "name": "Amazon Kinesis Video Streams Update Stream",
+              "id": "d885343a-012b-4825-b1fa-ff3e4c751fb7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/streams/:StreamName",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams",
+                    ":StreamName"
+                  ],
+                  "variable": [
+                    {
+                      "id": "bc079cc0-c7cc-4b0b-9623-4f2ee57d3ed6",
+                      "key": "StreamName",
+                      "value": "<string>",
+                      "description": "(Required) The name of the stream."
+                    }
+                  ]
+                },
+                "description": "Updates stream metadata, such as the device name and media type."
+              },
+              "response": [
+                {
+                  "id": "66142aa2-8664-4942-b814-e39e8dfbc0b3",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-66142aa2-8664-4942-b814-e39e8dfbc0b3"
+                },
+                {
+                  "id": "f06599e5-3104-4b6a-a91e-2764825d2683",
+                  "name": "Bad request",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-f06599e5-3104-4b6a-a91e-2764825d2683"
+                },
+                {
+                  "id": "2a6df89d-0837-441b-bceb-e3087e71dcd6",
+                  "name": "Access denied",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-2a6df89d-0837-441b-bceb-e3087e71dcd6"
+                },
+                {
+                  "id": "1244f76a-2d2e-496c-a8ac-1ca00f41fca6",
+                  "name": "Internal server error",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-1244f76a-2d2e-496c-a8ac-1ca00f41fca6"
+                }
+              ],
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-d885343a-012b-4825-b1fa-ff3e4c751fb7"
+            },
+            {
+              "name": "Amazon Kinesis Video Streams Delete Stream",
+              "id": "8fab5fba-fe98-44d8-9855-03936c8af3e2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/streams/:StreamName",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams",
+                    ":StreamName"
+                  ],
+                  "variable": [
+                    {
+                      "id": "55b011b8-d593-4260-9fb8-2f75119bb983",
+                      "key": "StreamName",
+                      "value": "<string>",
+                      "description": "(Required) The name of the stream."
+                    }
+                  ]
+                },
+                "description": "Deletes a Kinesis video stream and the data contained in the stream."
+              },
+              "response": [
+                {
+                  "id": "c3bb70e6-cfcb-4b0d-b799-bb40d1f088d3",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-c3bb70e6-cfcb-4b0d-b799-bb40d1f088d3"
+                },
+                {
+                  "id": "97c1192d-4361-4d2e-b6ec-35de35fc4607",
+                  "name": "Bad request",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-97c1192d-4361-4d2e-b6ec-35de35fc4607"
+                },
+                {
+                  "id": "a0c47b5e-4ab8-476b-8b3a-64fdb1d663b6",
+                  "name": "Access denied",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-a0c47b5e-4ab8-476b-8b3a-64fdb1d663b6"
+                },
+                {
+                  "id": "b0bf40f0-0efb-46af-9b6c-5d0170eba353",
+                  "name": "Internal server error",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/streams/:StreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "streams",
+                        ":StreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "StreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:32.000Z",
+                  "updatedAt": "2026-07-28T00:47:32.000Z",
+                  "uid": "35240-b0bf40f0-0efb-46af-9b6c-5d0170eba353"
+                }
+              ],
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-8fab5fba-fe98-44d8-9855-03936c8af3e2"
+            }
+          ],
+          "id": "0bcce217-2548-43aa-abd5-3d1b8b8fffd6",
+          "createdAt": "2026-07-28T00:47:32.000Z",
+          "updatedAt": "2026-07-28T00:47:32.000Z",
+          "uid": "35240-0bcce217-2548-43aa-abd5-3d1b8b8fffd6"
+        },
+        {
+          "name": "Amazon Kinesis Video Streams Create Stream",
+          "id": "74763db3-b294-44e3-bd00-443e4420a2b6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/streams",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "streams"
+              ]
+            },
+            "description": "Creates a new Kinesis video stream."
+          },
+          "response": [
+            {
+              "id": "df848bc9-2e60-4cea-8a6b-fedcb7078b90",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-df848bc9-2e60-4cea-8a6b-fedcb7078b90"
+            },
+            {
+              "id": "96fdb69d-deff-47c0-b24f-4e74b2867e15",
+              "name": "Bad request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-96fdb69d-deff-47c0-b24f-4e74b2867e15"
+            },
+            {
+              "id": "36711721-8201-4ae6-88b4-357eb0e35a5b",
+              "name": "Access denied",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-36711721-8201-4ae6-88b4-357eb0e35a5b"
+            },
+            {
+              "id": "aaed54c3-6401-4c7b-9ab7-81e0d61b9255",
+              "name": "Internal server error",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-aaed54c3-6401-4c7b-9ab7-81e0d61b9255"
+            }
+          ],
+          "createdAt": "2026-07-28T00:47:32.000Z",
+          "updatedAt": "2026-07-28T00:47:32.000Z",
+          "uid": "35240-74763db3-b294-44e3-bd00-443e4420a2b6"
+        },
+        {
+          "name": "Amazon Kinesis Video Streams List Streams",
+          "id": "c850e247-1042-4ebb-8f20-046c44700390",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/streams",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "streams"
+              ]
+            },
+            "description": "Returns an array of StreamInfo objects."
+          },
+          "response": [
+            {
+              "id": "5d221e0a-9432-4e61-8d31-cb4d3bb2f45a",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-5d221e0a-9432-4e61-8d31-cb4d3bb2f45a"
+            },
+            {
+              "id": "0d119e66-78bc-407c-ac20-e91a7eeee396",
+              "name": "Bad request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-0d119e66-78bc-407c-ac20-e91a7eeee396"
+            },
+            {
+              "id": "beb770c1-b4ea-4ed3-8848-452e76ea99cf",
+              "name": "Access denied",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-beb770c1-b4ea-4ed3-8848-452e76ea99cf"
+            },
+            {
+              "id": "e139ca82-cf1e-43e2-a57a-e2563e537541",
+              "name": "Internal server error",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "streams"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:32.000Z",
+              "updatedAt": "2026-07-28T00:47:32.000Z",
+              "uid": "35240-e139ca82-cf1e-43e2-a57a-e2563e537541"
+            }
+          ],
+          "createdAt": "2026-07-28T00:47:32.000Z",
+          "updatedAt": "2026-07-28T00:47:32.000Z",
+          "uid": "35240-c850e247-1042-4ebb-8f20-046c44700390"
+        }
+      ],
+      "id": "c06ef6da-1510-4b1b-970f-4168e4099023",
+      "createdAt": "2026-07-28T00:47:32.000Z",
+      "updatedAt": "2026-07-28T00:47:32.000Z",
+      "uid": "35240-c06ef6da-1510-4b1b-970f-4168e4099023"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://kinesisvideo.us-east-1.amazonaws.com"
+    }
+  ]
+}
