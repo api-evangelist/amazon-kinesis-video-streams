@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Amazon Kinesis Video Signaling Channels Streams API
   description: The Amazon Kinesis Video Streams API provides programmatic access to manage Kinesis Video Streams resources.
