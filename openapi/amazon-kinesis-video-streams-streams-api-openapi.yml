@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Amazon Kinesis Video Signaling Channels Streams API
+  title: Amazon Kinesis Video Streams API
   description: The Amazon Kinesis Video Streams API provides programmatic access to manage Kinesis Video Streams resources.
   version: '2024-01-01'
   contact:
