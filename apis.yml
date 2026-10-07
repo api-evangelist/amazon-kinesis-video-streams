@@ -99,6 +99,8 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-kinesis-video-streams-context.jsonld
 common:
+- type: Plans
+  url: plans/amazon-kinesis-video-streams-plans-pricing.yml
 - type: Website
   url: https://aws.amazon.com/kinesis/video-streams/
 - type: PostmanWorkspace
