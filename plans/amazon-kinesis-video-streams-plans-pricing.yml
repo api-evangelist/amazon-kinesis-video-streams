@@ -1,0 +1,104 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://aws.amazon.com/kinesis/video-streams/pricing/
+sources:
+- https://aws.amazon.com/kinesis/video-streams/pricing/
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Main pricing tables render via dynamic price tokens that did not resolve in the captured text; numeric
+  rates listed here are quoted from the page's US-East pricing examples. Page also mentions free tier
+  and 'Request a pricing quote'.
+plan_count: 5
+currency: USD
+plans:
+- name: Data ingested (US-East, per GB)
+  price_text: $0.0085 per GB ingested
+  price: 0.0085
+  currency: USD
+  period: per-use
+  unit: GB ingested
+- name: Data consumed using HLS (US-East)
+  price_text: $0.0119 per GB data consumed using HLS
+  price: 0.0119
+  currency: USD
+  period: per-use
+  unit: GB consumed via HLS
+- name: Active signaling channel (WebRTC, US-East)
+  price_text: $0.03 per month for an active signaling channel
+  price: 0.03
+  currency: USD
+  period: month
+  unit: active signaling channel
+- name: Signaling messages (WebRTC, US-East)
+  price_text: $2.25 for a million signaling messages
+  price: 2.25
+  currency: USD
+  period: per-use
+  unit: million signaling messages
+- name: TURN streaming minutes (WebRTC, US-East)
+  price_text: $0.12 per thousand TURN streaming minutes
+  price: 0.12
+  currency: USD
+  period: per-use
+  unit: thousand TURN minutes
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - subscription
+  units:
+  - compute
+  - data
+  - message
+  plans:
+  - name: Data ingested (US-East, per GB)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Data consumed using HLS (US-East)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Active signaling channel (WebRTC, US-East)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Signaling messages (WebRTC, US-East)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - message
+    periods:
+    - other
+  - name: TURN streaming minutes (WebRTC, US-East)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
