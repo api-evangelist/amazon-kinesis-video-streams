@@ -2,6 +2,7 @@
 generated: '2026-10-07'
 method: searched
 source: https://aws.amazon.com/kinesis/video-streams/pricing/
+name: Amazon Kinesis Video Streams API Plans
 sources:
 - https://aws.amazon.com/kinesis/video-streams/pricing/
 provenance:
@@ -52,7 +53,7 @@ plans:
   period: per-use
   unit: thousand TURN minutes
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid

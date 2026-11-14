@@ -5,8 +5,17 @@ artifacts:
   agentic-access/amazon-kinesis-video-streams-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-kinesis-video-streams-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-kinesis-video-streams-authentication.yml:
     method: derived
+    evidence: declared in the artifact
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  changelog/amazon-kinesis-video-streams-changelog.yml:
+    method: searched
     evidence: declared in the artifact
   collections/amazon-kinesis-video-streams-signaling-channels-api.opencollection.json:
     method: derived
@@ -26,6 +35,18 @@ artifacts:
   collections/amazon-kinesis-video-streams.postman_collection.json:
     method: derived
     evidence: openapi/amazon-kinesis-video-streams
+  conformance/amazon-kinesis-video-streams-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-kinesis-video-streams-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-kinesis-video-streams-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  errors/amazon-kinesis-video-streams-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/amazon-kinesis-video-streams-channel-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -38,6 +59,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-kinesis-video-streams-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -50,7 +74,25 @@ artifacts:
   json-schema/amazon-kinesis-video-streams-channel-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-kinesis-video-streams-describe-edge-configuration-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-kinesis-video-streams-get-dashstreaming-session-urlinput-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-kinesis-video-streams-get-hlsstreaming-session-urlinput-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-kinesis-video-streams-get-images-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-kinesis-video-streams-start-edge-configuration-update-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-kinesis-video-streams-stream-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-kinesis-video-streams-update-data-retention-input-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-structure/amazon-kinesis-video-streams-channel-structure.json:
@@ -62,7 +104,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -131,10 +173,21 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-kinesis-video-streams-openapi.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-kinesis-video-streams-lifecycle.yml:
+    method: searched
+    evidence: declared in the artifact
+  llms/amazon-kinesis-video-streams-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-kinesis-video-streams-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-kinesis-video-streams-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
   openapi/amazon-kinesis-video-streams-operations-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -144,6 +197,12 @@ artifacts:
   openapi/amazon-kinesis-video-streams-streams-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  packages/amazon-kinesis-video-streams-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-kinesis-video-streams-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-kinesis-video-streams-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -156,10 +215,16 @@ artifacts:
   postman/amazon-kinesis-video-streams-streams-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-kinesis-video-streams-streams-api
+  privacy/amazon-kinesis-video-streams-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-kinesis-video-streams-rate-limits.yml:
-    method: generated
+    method: searched
     evidence: declared in the artifact
   rules/amazon-kinesis-video-streams-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-kinesis-video-streams-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-kinesis-video-streams-spectral-rules.yml:
@@ -178,8 +243,43 @@ artifacts:
     method: generated
     evidence: declared in the artifact
   smithy/kinesis-video-2017-09-30.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/kinesis-video/service/2017-09-30/kinesis-video-2017-09-30.json
+      (sha256 1913e53822ef, fetched 2026-11-11T21:11:23+00:00)
+  smithy/kinesis-video-archived-media-2017-09-30.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/kinesis-video-archived-media/service/2017-09-30/kinesis-video-archived-media-2017-09-30.json
+      (sha256 9f754cf3e7c4, fetched 2026-11-11T21:11:24+00:00)
+  smithy/kinesis-video-media-2017-09-30.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/kinesis-video-media/service/2017-09-30/kinesis-video-media-2017-09-30.json
+      (sha256 37b8c64ca011, fetched 2026-11-11T21:11:25+00:00)
+  smithy/kinesis-video-signaling-2019-12-04.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/kinesis-video-signaling/service/2019-12-04/kinesis-video-signaling-2019-12-04.json
+      (sha256 c51d410883c1, fetched 2026-11-11T21:11:26+00:00)
+  smithy/kinesis-video-webrtc-storage-2018-05-10.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/kinesis-video-webrtc-storage/service/2018-05-10/kinesis-video-webrtc-storage-2018-05-10.json
+      (sha256 1f0b9c181b69, fetched 2026-11-11T21:11:26+00:00)
+  terms/amazon-kinesis-video-streams-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-kinesis-video-streams-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-kinesis-video-streams-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-kinesis-video-streams-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-kinesis-video-streams-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-kinesis-video-streams-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-kinesis-video-streams-well-known.yml:
     method: unknown
     evidence: no authorship recorded
